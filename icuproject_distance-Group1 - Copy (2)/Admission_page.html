@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission form-ICU</title>
+    <link rel="shortcut icon" href="image/white bg.jpg" type="image">
+    <link rel="stylesheet" href="css/admission_style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<style>
+/* Add hover effect for navigation links */
+nav ul li a:hover {
+    color: #663ff1; /* Change to a professional color */
+    text-decoration: underline;
+}
+
+/* Make the navigation bar sticky */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #2ab6f7; /* Add background color for better visibility */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Improve form layout */
+.r_form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #e0f8ee;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style input fields */
+.input {
+    padding: 10px;
+    border: 1px solid #0c0b0b;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Style buttons */
+.button, .clear_ad {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: #000000;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover, .clear_ad:hover {
+    background-color: #b33900;
+}
+
+/* Style the call-to-action banner */
+.cta-banner {
+    text-align: center;
+    padding: 20px;
+    background-color: #bdd9f7;
+    color: #00000085;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #84fce8d8;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #007BFF;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #0056b3;
+}
+</style>
+</head>
+<body>
+
+  <section class="header">
+    <nav>
+        <a href="index.html"><img src="image/white bg.jpg" id="logo-img"></a>
+
+        <div class="nav-links" id="navLinks">
+          <span class="icon" onclick="hidemenu()">&#10005;</span>  
+          <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Admission_page.html">Admission</a></li>
+                <li><a href="index.html#course_call">Course</a></li>
+                <li><a href="fees_page.html">Fees</a></li>
+                <li><a href="Contact_page.html">Contact</a></li>
+            </ul>
+        </div> 
+        <span class="icon" onclick="showmenu()">&#9776;</span>
+    </nav>
+
+	<div class="wrapper">
+		<div class="r_form_wrap">
+			
+			<div class="title">
+				<p>Admission form</p>
+			</div>
+			
+			<div class="cta-banner">
+				<h2>Join Information And Communincation University Today!</h2>
+				<p>Fill out the form below to start your journey with us.</p>
+			</div>
+			
+			<!-- Admission from -->
+			<div class="r_form">
+				<form method="post" onsubmit="return validateForm();">
+					<div class="input_wrap">
+						<label for="yourname">Your Name</label>
+						<div class="input_item">
+							<i class="fa fa-user" id="icon"></i>
+							<input type="text" name="your name" class="input" id="yourname" placeholder="Enter the name" required>
+						</div>
+					</div>
+					<div class="input_wrap">
+						<label for="emailaddress">Email Address</label>
+						<div class="input_item">
+							<i class="fa fa-envelope" id="icon"></i>
+							<input type="text" name="email address" class="input" id="emailaddress" placeholder="Enter the Email ID" required>
+						</div>
+					</div>
+
+					<div class="input_wrap">
+						<label for="phone">Phone</label>
+						<div class="input_item">
+							<i class="fa fa-phone-square" id="icon"></i>
+							<input type="number" name="phone" class="input" id="phone" placeholder="Enter the Mobile number" required>
+						</div>
+					</div>
+					<div class="input_wrap">
+						<label>Gender</label>
+						<div class="input_radio">
+							<div class="input_radio_item">
+								<input type="radio" id="male" name="gender" class="radio" value="male" checked>
+								<label for="male" class="radio_mark">
+									<ion-icon class="i" name="male-sharp"></ion-icon>
+								Male</label>
+							</div>
+							<div class="input_radio_item">
+								<input type="radio" id="female" name="gender" class="radio" value="female">
+								<label for="female" class="radio_mark">
+									<ion-icon class="i" name="female-sharp"></ion-icon>
+									Female</label>
+							</div>
+							<div class="input_radio_item">
+								<input type="radio" id="others" name="gender" class="radio" value="others">
+								<label for="others" class="radio_mark">
+									<ion-icon class="i" name="male-female-sharp"></ion-icon>
+									Others</label>
+							</div>
+						</div>
+					</div>
+	
+					<div class="input_wrap">
+						<label for="dob">Date Of Birth</label>
+						<div class="input_item">
+							<i class="fa fa-calendar" id="icon"></i>
+							<input type="date" name="dob" class="input" id="dob" required>
+						</div>
+					</div>
+
+					<div class="input_wrap">
+						<label for="course">Course</label>
+						<div class="input_item">
+							<i class="fa fa-caret-square-o-down" aria-hidden="true"id="icon" ></i>
+					<select id="course" name="cars" class="input" required>
+					<option value="select"> Select the Course</option>
+					<option value="bca"> SCHOOL OF HUMANITIES</option>
+					<option value="bscit">SCHOOL OF EDUCATION IT</option>
+					<option value="bscca&it">SCHOOL OF ENGINEERING</option>
+					</select>
+					</div>
+					</div>
+
+
+					<div class="input_wrap">
+						<label for="file">QUALIFICATION:GCE/DEGREE</label>
+						<div class="input_item">
+							<i class="fa fa-file" id="icon"></i>
+							<input type="file" name="file" class="input" id="file" required>
+						</div>
+					</div>
+
+					<div class="input_wrap">
+						<label for="password">Password</label>
+						<div class="input_item">
+							<i class="fa fa-key" id="icon"></i>
+							<input type="password" name="password" class="input" id="password" placeholder="Enter the password" >
+						</div>
+					</div>
+					<div class="input_wrap">
+						<label for="confirmpassword">Confirm Password</label>
+						<div class="input_item">
+							<i class="fa fa-check-circle" id="icon"></i>
+							<input type="password" name="confirm password" class="input" id="confirmpassword" placeholder="Enter the confirm password">
+						</div>
+					</div>
+
+					
+					<input type="submit" class="button" value="Register Now">
+					
+					<div ></div>
+					<input type="reset" class="clear_ad" value="Clear">
+					
+				</form>
+			</div>
+	
+		</div>
+	</div>
+	</section>
+	<div class="none_div">
+
+	</div>
+	
+	<footer>
+    <div class="footer-content">
+        <p>&copy; 2025 Information and Communication University. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+
+	</body>
+	<!-- Javascript for this Web page -->
+	<script src=" https://smtpjs.com/v3/smtp.js"></script>
+	<script>
+		function sendmail(){
+		Email.send({}).then(
+	message => alert("Thanks for filling out our form!")
+);
+		}
+	</script>
+	<script>
+	var navLinks= document.getElementById("navLinks");
+
+function showmenu(){
+    navLinks.style.right="0";
+}   
+function hidemenu(){
+    navLinks.style.right="-200px";
+}
+</script>
+<script>
+function validateForm() {
+    const email = document.getElementById("emailaddress").value;
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirmpassword").value;
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+    }
+
+    if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return false;
+    }
+
+    return true;
+}
+</script>
+</html>

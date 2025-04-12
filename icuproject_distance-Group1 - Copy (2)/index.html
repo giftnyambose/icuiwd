@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta
+      name="description"
+      content=" The Information And Communication University provide quality, which has been vital in setting up the standard of brilliance."
+    />
+    <meta name="keywords" content="Information And Communication University" />
+    <meta name="author" content="Group 1 " />
+
+    <title>INFORMATION AND COMMUNICATION UNIVERSITY</title>
+    <link rel="shortcut icon" href="image/white bg.jpg" type="cj" />
+    <link rel="stylesheet" href="css/main_style.css" />
+    <link rel="shortcut icon" href="image/white bg.jpg" type="image/svg+xml" />
+    <style>
+      /* Add hover effect for navigation links */
+      nav ul li a:hover {
+        color: #0000faf1; /* Professional color */
+        text-decoration: underline;
+      }
+
+      /* Make the navigation bar sticky */
+     
+      }
+
+      /* Style the search bar */
+      .search-bar {
+        display: inline-flex;
+        align-items: center;
+        margin-left: 20px;
+        background-color: #fa3d03;
+        padding: 5px 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(250, 2, 2, 0.1);
+      }
+      .search-bar input {
+        padding: 5px;
+        border: 1px solid #811f02dc;
+        border-radius: 4px;
+      }
+
+      /* Style the hero section */
+      .header {
+        position: relative;
+        color: #ff0303cc;
+        text-align: center;
+        padding: 100px 20px;
+      }
+
+      .header .text-box h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        animation: fadeInDown 1s ease-in-out;
+      }
+
+      .header .text-box p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        animation: fadeInUp 1s ease-in-out;
+      }
+
+      .hero-btn {
+        padding: 10px 20px;
+        background-color: #1900fffb;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+      }
+
+      .hero-btn:hover {
+        background-color: #f1b6ca;
+      }
+
+      /* Add animations */
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Style the course section */
+      .course {
+        text-align: center;
+        padding: 50px 20px;
+      }
+
+      .course h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      .course p {
+        font-size: 1rem;
+        margin-bottom: 40px;
+      }
+
+      .course .row {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+      }
+
+      .course-col {
+        flex: 1;
+        padding: 20px;
+        background-color: #abfcf8d3;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .course-col:hover {
+        transform: translateY(-10px);
+      }
+
+      /* Style the footer */
+      .footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #092325fd;
+        margin-top: 20px;
+      }
+
+      .footer .social-icons a {
+        margin: 0 10px;
+        color: #fa7639;
+        font-size: 20px;
+        text-decoration: none;
+      }
+
+      .footer .social-icons a:hover {
+        color: #2498c5;
+      }
+    </style>
+  </head>
+  <body>
+    <section
+      class="header"
+      style="
+        background: url('image/home.jpg') no-repeat center center;
+        background-size: cover;
+      "
+    >
+      <nav>
+        <a href="index.html"><img src="image/white bg.jpg" id="logo-img" /></a>
+
+        <div class="nav-links" id="navLinks">
+          <span class="icon" onclick="hidemenu()">&#10005;</span>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Admission_page.html">Admission</a></li>
+            <li><a href="#course_call">Course</a></li>
+            <li><a href="fees_page.html">Fees</a></li>
+            <li><a href="Contact_page.html">Contact</a></li>
+          </ul>
+        </div>
+        <span class="icon" onclick="showmenu()">&#9776;</span>
+      </nav>
+
+      <div class="text-box">
+        <h1>INFORMATION AND COMMUNICATION UNIVERSITY</h1>
+        <h3>
+          The Information and Communications University (ICU) is registered with
+          the Higher Education Authority (HEA), under the Ministry of Higher
+          Education to offer distance (e-Learning), <br />and full-time
+          education in Zambia.
+        </h3>
+
+        <a href="Admission_page.html" class="hero-btn">Admission Open</a>
+      </div>
+    </section>
+
+    <!--Course of Collage-->
+
+    <section class="course" id="course_call">
+      <h1>Programs We Offer</h1>
+
+      <div class="row">
+        <div class="course-col">
+          <h2>SCHOOL OF HUMANITIES</h2>
+          <p>
+            The school of humanities at ICU offers the following courses:
+            Finance and Accounting Social work Project management Economics
+            public Administration journalism and Public Relation Human Resourse.
+          </p>
+        </div>
+
+        <div class="course-col">
+          <h2>SCHOOL OF EDUCATION</h2>
+          <p>
+            BSc (Bachelor of Science) in ICT with Education Agriculture with
+            Education Design and Technology with Education.
+          </p>
+        </div>
+
+        <div class="course-col">
+          <h2>SCHOOL OF ENGINEERING</h2>
+          <p>
+            The Bachelor of Science in Electrical and Electronics Engineering
+            ICT in Bussiness Management ICT in information Security and Computer
+            Forensics ICT in Software engineering ICT in Systems Engineering
+            ICT.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Campus Section-->
+
+    <section class="campus">
+      <h1>Our Campus</h1>
+      <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quisquam atque non voluptate</p> -->
+
+      <div class="row">
+        <div class="campus-col">
+          <img src="image/stundent.jpg" alt="" />
+          <div class="layer">
+            <h3>Environment</h3>
+          </div>
+        </div>
+
+        <div class="campus-col">
+          <img src="image/eeeeeee.jpg" alt="" />
+          <div class="layer">
+            <h3>Community</h3>
+          </div>
+        </div>
+
+        <div class="campus-col">
+          <img src="image/campus.jpg" alt="" />
+          <div class="layer">
+            <h3>Education</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Facilities Section-->
+
+    <section class="facilities">
+      <h1>Our facilities</h1>
+      <p>
+        Facilities provide for Students by Information And Communication
+        University
+      </p>
+
+      <div class="row">
+        <div class="facilities-col">
+          <img src="image/HKSLibrary_SilentStudy_7_1MB.jpg"">
+          <h3>Library</h3>
+          <p>
+            The objective for the library is to provide an environment condusive
+            for academics and provide a variety of materials such as books,
+            magazines and other vital documents for refrences and studying
+            generally.
+          </p>
+        </div>
+
+        <div class="facilities-col">
+          <img src="image/Main Hall.jpg" alt="" />
+          <h3>Main Hall</h3>
+          <p>
+            The main hall is multi tasked, its used for different events like
+            graduations it can accomodate more than 300 peaple.
+          </p>
+        </div>
+
+        <div class="facilities-col">
+          <img src="image/Cyber Security.jpg" alt="" />
+          <h3>Cyber Security</h3>
+          <p>
+            This were we do most of the practicle work to do with technology is
+            done.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Call To Action Section-->
+
+    <section class="ctn"></section>
+
+    <!--Footer-->
+    <section class="footer">
+      <footer>
+        <img src="image/Thumbnail .jpg" alt="banner" />
+      </footer>
+      <style>
+        footer {
+          background-color: #4567f076;
+          padding: 20px;
+          text-align: center;
+        }
+
+        footer img {
+          width: 90%;
+          height: auto;
+        }
+      </style>
+      <h4>About Us</h4>
+      <p>
+        The Information and Communications University (ICU) is registered with
+        the Higher Education Authority (HEA), under the Ministry of Higher
+        Education to offer distance (e-Learning), and full-time education in
+        Zambia.
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+      </div>
+      <p id="copyright">Made By &#10084;Group 1</p>
+    </section>
+
+    <!--Javascript is Start-->
+    <script src="javascript/main_script.js"></script>
+  </body>
+</html>
